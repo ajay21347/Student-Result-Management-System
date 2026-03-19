@@ -54,37 +54,53 @@ Database: MySQL
 
 📂 Project Structure
 
-student-result-system/
+STUDENT-RESULT/
 
-│── frontend/
+│
+
+├── backend/
+
+│   ├── add\_marks.php        # Add marks for students
+
+│   ├── add\_student.php      # Add new student
+
+│   ├── db.php               # Database connection
+
+│   ├── delete\_student.php   # Delete student record
+
+│   ├── get\_results.php      # Fetch student results
+
+│   ├── get\_students.php     # Fetch student list
+
+│   ├── login.php            # User login API
+
+│   └── signup.php           # User registration API
+
+│
+
+├── frontend/
 
 │   ├── css/
 
+│   │   └── (stylesheets)
+
+│   │
+
 │   ├── js/
 
-│   ├── pages/
+│   │   ├── auth.js          # Handles login/signup logic
+
+│   │   └── script.js        # Main frontend logic
+
+│   │
+
+│   ├── auth.html            # Login \& Signup page
+
+│   └── index.html           # Main dashboard page
 
 │
 
-│── backend/
-
-│   ├── config/
-
-│   ├── auth/
-
-│   ├── api/
-
-│
-
-│── database/
-
-│   └── schema.sql
-
-│
-
-│── README.md
-
-⚙️ Installation \& Setup
+└── README.md                # Project documentation⚙️ Installation \& Setup
 
 
 

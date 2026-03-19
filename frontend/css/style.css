@@ -1,0 +1,203 @@
+/* Background with new color theme */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Page animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  margin-top: 20px;
+  animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Main container */
+.container {
+  width: 650px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: zoomIn 0.7s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Section headings */
+h3 {
+  margin-top: 30px;
+  color: #333;
+  border-left: 6px solid #11998e;
+  padding-left: 18px;
+}
+
+/* Inputs */
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  border-color: #38ef7d;
+  box-shadow: 0 0 10px rgba(56, 239, 125, 0.4);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+}
+
+/* Subject blocks */
+.subjects {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.subject-box {
+  flex: 1;
+}
+
+.subject-box label {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+thead {
+  background: #11998e;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+}
+
+tbody tr {
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: #e6fffa;
+}
+
+tbody tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+/* Grade colors */
+.grade-A {
+  color: green;
+  font-weight: bold;
+}
+.grade-B {
+  color: orange;
+  font-weight: bold;
+}
+.grade-C {
+  color: red;
+  font-weight: bold;
+}
+
+/* Action buttons */
+.edit-btn {
+  background: #4facfe;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.5);
+}
+.modal-content {
+  background:white;
+  padding:20px;
+  margin:10% auto;
+  width:300px;
+}

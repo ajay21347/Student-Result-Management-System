@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Result System</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <h2>🎓 Student Result Dashboard</h2>
+
+    <div class="container">
+      <button onclick="logout()">Logout</button>
+      <!-- Add Student -->
+      <h3>Add Student + Marks</h3>
+
+      <input id="name" placeholder="Enter Student Name" />
+      <input id="roll" placeholder="Enter Roll Number" />
+
+      <div class="subjects">
+        <div class="subject-box">
+          <label>Subject 1</label>
+          <input id="sub1" type="number" placeholder="Marks" />
+        </div>
+
+        <div class="subject-box">
+          <label>Subject 2</label>
+          <input id="sub2" type="number" placeholder="Marks" />
+        </div>
+
+        <div class="subject-box">
+          <label>Subject 3</label>
+          <input id="sub3" type="number" placeholder="Marks" />
+        </div>
+      </div>
+
+      <button onclick="addFullData()">➕ Add Student & Marks</button>
+
+      <!-- Results -->
+      <h3>Results</h3>
+
+      <button onclick="loadResults()">📊 Load Results</button>
+
+      <!-- Search + Filter -->
+      <input id="searchInput" placeholder="Search by Name or Roll" />
+      <select id="gradeFilter">
+        <option value="">All Grades</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+      <button onclick="searchResult()">🔍 Search</button>
+
+      <!-- Table -->
+      <table id="resultTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Sub1</th>
+            <th>Sub2</th>
+            <th>Sub3</th>
+            <th>Total</th>
+            <th>%</th>
+            <th>Grade</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Charts -->
+      <canvas id="barChart"></canvas>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- Modal (OUTSIDE container) -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <h3>Edit Marks</h3>
+        <input id="editS1" placeholder="Subject 1" />
+        <input id="editS2" placeholder="Subject 2" />
+        <input id="editS3" placeholder="Subject 3" />
+        <button onclick="updateMarks()">Update</button>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
